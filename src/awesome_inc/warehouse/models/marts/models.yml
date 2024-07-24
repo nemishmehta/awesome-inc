@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: fct_installation
+    description: Fact table for installation data
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: name
+        tests:
+          - not_null
+      - name: description
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: installation_date
+        tests:
+          - not_null
+      - name: category_id
+        tests:
+          - not_null
+      - name: revenue
+        tests:
+          - not_null
+      - name: country_id
+        tests:
+          - not_null
+
+  - name: monthly_installations
+    description: Total monthly installation table
+    columns:
+      - name: month
+        tests:
+          - not_null
+      - name: installations
+        tests:
+          - not_null
+
+  - name: product_category_revenue
+    description: Total revenue per product category table
+    columns:
+      - name: category_name
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
+
+  - name: region_revenue
+    description: Total revenue per region table
+    columns:
+      - name: region
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
