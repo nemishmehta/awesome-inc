@@ -4,7 +4,7 @@ with int_dim_customer as (
         name,
         email,
         country_id,
-        premium_customer,
+        cast(premium_customer as boolean) as premium_customer,
         dbt_scd_id,
         dbt_updated_at,
         dbt_valid_from,
