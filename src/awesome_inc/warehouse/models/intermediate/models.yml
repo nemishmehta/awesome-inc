@@ -44,7 +44,7 @@ models:
         tests:
           - not_null
           - accepted_values:
-              values: ["yes", "no"]
+              values: [true, false]
       - name: dbt_updated_at
         tests:
           - not_null
