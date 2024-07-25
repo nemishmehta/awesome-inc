@@ -4,9 +4,13 @@ with int_dim_product as (
         reference,
         name,
         category_id,
-        cast(price as float) as price
+        cast(price as float) as price,
+        dbt_scd_id,
+        dbt_updated_at,
+        dbt_valid_from,
+        dbt_valid_to
     from
-        {{ source('bronze', 'product') }}
+        {{ ref('product_snapshot') }}
 )
 select
     *

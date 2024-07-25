@@ -38,6 +38,13 @@ models:
           - not_null
           - accepted_values:
               values: ["yes", "no"]
+      - name: dbt_updated_at
+        tests:
+          - not_null
+      - name: dbt_valid_from
+        tests:
+          - not_null
+      - name: dbt_valid_to
 
   - name: int_fct_installation
     description: Intermediate installation table
@@ -81,6 +88,13 @@ models:
       - name: price
         tests:
           - not_null
+      - name: dbt_updated_at
+        tests:
+          - not_null
+      - name: dbt_valid_from
+        tests:
+          - not_null
+      - name: dbt_valid_to
 
   - name: int_dim_product_category
     description: Intermediate product category table
@@ -92,3 +106,10 @@ models:
       - name: name
         tests:
           - not_null
+      - name: dbt_updated_at
+        tests:
+          - not_null
+      - name: dbt_valid_from
+        tests:
+          - not_null
+      - name: dbt_valid_to

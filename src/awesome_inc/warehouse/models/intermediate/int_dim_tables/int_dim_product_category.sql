@@ -1,9 +1,13 @@
 with int_dim_product_category as (
     select
         id,
-        name
+        name,
+        dbt_scd_id,
+        dbt_updated_at,
+        dbt_valid_from,
+        dbt_valid_to
     from
-        {{ source('bronze', 'product_category') }}
+        {{ ref('product_category_snapshot') }}
 )
 select
     *
