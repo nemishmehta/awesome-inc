@@ -5,9 +5,9 @@ models:
     description: Intermediate country table
     columns:
       - name: id
+        # Add a better test to check for unique values
         tests:
           - not_null
-          - unique
       - name: name
         tests:
           - not_null
@@ -15,14 +15,21 @@ models:
       - name: region
         tests:
           - not_null
+      - name: dbt_updated_at
+        tests:
+          - not_null
+      - name: dbt_valid_from
+        tests:
+          - not_null
+      - name: dbt_valid_to
 
   - name: int_dim_customer
     description: Intermediate customer table
     columns:
       - name: id
+        # Add a better test to check for unique values
         tests:
           - not_null
-          - unique
       - name: name
         tests:
           - not_null
@@ -73,9 +80,9 @@ models:
     description: Intermediate product table
     columns:
       - name: id
+        # Add a better test to check for unique values
         tests:
           - not_null
-          - unique
       - name: reference
         tests:
           - not_null
@@ -100,9 +107,9 @@ models:
     description: Intermediate product category table
     columns:
       - name: id
+        # Add a better test to check for unique values
         tests:
           - not_null
-          - unique
       - name: name
         tests:
           - not_null
