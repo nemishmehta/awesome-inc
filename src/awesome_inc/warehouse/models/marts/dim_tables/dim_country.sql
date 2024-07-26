@@ -2,7 +2,7 @@ with dim_country as (
     select
         *
     from
-        {{ ref('int_dim_country') }}
+        {{ ref('stg_dim_country') }}
 )
 select
     *

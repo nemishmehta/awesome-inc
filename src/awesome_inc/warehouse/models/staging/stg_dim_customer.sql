@@ -1,4 +1,4 @@
-with int_dim_customer as (
+with stg_dim_customer as (
     select
         id,
         name,
@@ -15,4 +15,4 @@ with int_dim_customer as (
 select
     *
 from
-    int_dim_customer
+    stg_dim_customer

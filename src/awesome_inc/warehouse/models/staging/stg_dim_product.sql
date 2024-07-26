@@ -1,4 +1,4 @@
-with int_dim_product as (
+with stg_dim_product as (
     select
         id,
         reference,
@@ -15,4 +15,4 @@ with int_dim_product as (
 select
     *
 from
-    int_dim_product
+    stg_dim_product

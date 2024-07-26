@@ -1,4 +1,4 @@
-with int_fct_installation as (
+with stg_fct_installation as (
     select
         id,
         name,
@@ -12,4 +12,4 @@ with int_fct_installation as (
 select
     *
 from
-    int_fct_installation
+    stg_fct_installation

@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: int_dim_country
-    description: Intermediate country table
+  - name: stg_dim_country
+    description: Staging country table
     columns:
       - name: id
         # Add a better test to check for unique values
@@ -23,8 +23,8 @@ models:
           - not_null
       - name: dbt_valid_to
 
-  - name: int_dim_customer
-    description: Intermediate customer table
+  - name: stg_dim_customer
+    description: Staging customer table
     columns:
       - name: id
         # Add a better test to check for unique values
@@ -53,8 +53,8 @@ models:
           - not_null
       - name: dbt_valid_to
 
-  - name: int_fct_installation
-    description: Intermediate installation table
+  - name: stg_fct_installation
+    description: Staging installation table
     columns:
       - name: id
         tests:
@@ -76,8 +76,8 @@ models:
         tests:
           - not_null
 
-  - name: int_dim_product
-    description: Intermediate product table
+  - name: stg_dim_product
+    description: Staging product table
     columns:
       - name: id
         # Add a better test to check for unique values
@@ -103,8 +103,8 @@ models:
           - not_null
       - name: dbt_valid_to
 
-  - name: int_dim_product_category
-    description: Intermediate product category table
+  - name: stg_dim_product_category
+    description: Staging product category table
     columns:
       - name: id
         # Add a better test to check for unique values

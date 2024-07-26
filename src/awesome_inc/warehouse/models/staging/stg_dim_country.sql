@@ -1,15 +1,16 @@
-with int_dim_product_category as (
+with stg_dim_country as (
     select
         id,
         name,
+        region,
         dbt_scd_id,
         dbt_updated_at,
         dbt_valid_from,
         dbt_valid_to
     from
-        {{ ref('product_category_snapshot') }}
+        {{ ref('country_snapshot') }}
 )
 select
     *
 from
-    int_dim_product_category
+    stg_dim_country

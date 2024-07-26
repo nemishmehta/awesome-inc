@@ -1,4 +1,4 @@
-with int_fct_installation as (
+with stg_fct_installation as (
     select
         id,
         name,
@@ -7,7 +7,7 @@ with int_fct_installation as (
         customer_id,
         installation_date
     from
-        {{ ref('int_fct_installation') }}
+        {{ ref('stg_fct_installation') }}
 ),
 
 dim_product as (
@@ -29,7 +29,7 @@ dim_customer as (
 
 fct_installation as (
     select
-        int_fct_installation.id,
+        stg_fct_installation.id,
         name,
         description,
         product_id,
@@ -39,11 +39,11 @@ fct_installation as (
         revenue,
         country_id
     from
-        int_fct_installation
+        stg_fct_installation
         left join dim_product
-            on int_fct_installation.product_id = dim_product.id
+            on stg_fct_installation.product_id = dim_product.id
         left join dim_customer
-            on int_fct_installation.customer_id = dim_customer.id
+            on stg_fct_installation.customer_id = dim_customer.id
 )
 
 select

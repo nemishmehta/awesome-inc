@@ -2,7 +2,7 @@ with dim_product as (
     select
         *
     from
-        {{ ref('int_dim_product') }}
+        {{ ref('stg_dim_product') }}
 )
 select
     *
