@@ -5,7 +5,7 @@ repos:
         name: ruff format
         stages: [commit]
         types: [python]
-        entry: rye run ruff format src/ tests/
+        entry: rye run ruff format src/awesome_inc/api/ tests/
         language: system
         pass_filenames: false
         always_run: true
@@ -13,7 +13,7 @@ repos:
         name: ruff check
         stages: [commit]
         types: [python]
-        entry: rye run ruff check --fix src/ tests/
+        entry: rye run ruff check --fix src/awesome_inc/api/ tests/
         language: system
         pass_filenames: false
         always_run: true
@@ -31,7 +31,7 @@ repos:
         name: mypy
         stages: [commit]
         types: [python]
-        entry: rye run mypy src/
+        entry: rye run mypy src/awesome_inc/api/
         language: system
         pass_filenames: false
         always_run: true
