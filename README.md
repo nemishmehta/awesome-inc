@@ -105,12 +105,13 @@ The data warehouse has been created using dbt and the tables are located under a
 
 1. If you are using rye as the package manager, then all you need to do is execute the command `rye sync`. This will install the dependencies (like dbt-core, dbt-postgres).
 2. Once dbt is installed you can execute the `dbt deps` command to install dbt-specific dependencies.
-3. Finally, you can execute the `dbt build` command that will create all the necessary tables and test them for data quality.
+3. Finally, you can execute the `dbt build` command that will create all the necessary tables and test them for data quality. Note, you need to have the postgres container running to be able to build the models.
 
 ### Usage
 
-1. Using pgadmin4, you can explore the different tables that have been created using dbt.
-2. You can also execute `dbt docs generate` and `dbt docs serve` to generate and view documentation and lineage graphs.
+1. Execute `docker compose up` to launch the pgadmin4 container.
+2. Using pgadmin4, you can explore the different tables that have been created using dbt.
+3. You can also execute `dbt docs generate` and `dbt docs serve` to generate and view documentation and lineage graphs.
 
 ### Note
 
