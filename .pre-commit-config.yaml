@@ -1,0 +1,38 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff format
+        name: ruff format
+        stages: [commit]
+        types: [python]
+        entry: rye run ruff format src/awesome_inc/api/ tests/
+        language: system
+        pass_filenames: false
+        always_run: true
+      - id: ruff check
+        name: ruff check
+        stages: [commit]
+        types: [python]
+        entry: rye run ruff check --fix src/awesome_inc/api/ tests/
+        language: system
+        pass_filenames: false
+        always_run: true
+        fail_fast: false
+      - id: pytest
+        name: pytest
+        stages: [commit]
+        types: [python]
+        entry: rye run pytest tests/
+        language: system
+        pass_filenames: false
+        always_run: true
+        fail_fast: false
+      - id: mypy
+        name: mypy
+        stages: [commit]
+        types: [python]
+        entry: rye run mypy src/awesome_inc/api/
+        language: system
+        pass_filenames: false
+        always_run: true
+        fail_fast: false
