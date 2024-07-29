@@ -104,7 +104,7 @@ Before diving into creating a data warehouse, it was necessary to create a dimen
 The data warehouse has been created using dbt and the tables are located under a different schema called `warehouse` within the Postgres database.
 
 1. If you are using rye as the package manager, then all you need to do is execute the command `rye sync`. This will install the dependencies (like dbt-core, dbt-postgres).
-2. Once, dbt is installed you can execute the `dbt deps` command to install dbt-specific dependencies.
+2. Once dbt is installed you can execute the `dbt deps` command to install dbt-specific dependencies.
 3. Finally, you can execute the `dbt build` command that will create all the necessary tables and test them for data quality.
 
 ### Usage
