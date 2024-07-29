@@ -50,3 +50,11 @@ def get_session() -> Session:
         bind=new_engine(), autocommit=False, autoflush=False
     )
     return sessionlocal()
+
+
+def get_db():
+    db = get_session()
+    try:
+        yield db
+    finally:
+        db.close()
