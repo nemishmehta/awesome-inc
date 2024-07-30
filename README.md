@@ -119,5 +119,4 @@ The data warehouse has been created using dbt and the tables are located under a
 
 ## Future Releases (To-do)
 
-1. Implement CI using GitHub Actions.
-2. Add [re_data](https://docs.getre.io/latest/docs/re_data/introduction/whatis_data) to improve data quality within the dbt project.
+1. Add [re_data](https://docs.getre.io/latest/docs/re_data/introduction/whatis_data) to improve data quality within the dbt project.
